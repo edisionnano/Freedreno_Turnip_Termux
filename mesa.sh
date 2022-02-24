@@ -12,6 +12,8 @@ yes|pip3 install mako meson
 wget https://github.com/edisionnano/Freedreno_Turnip_Termux/raw/main/mesa -P /data/data/com.termux/files/home/.local/share/meson/native
 wget https://github.com/edisionnano/Freedreno_Turnip_Termux/raw/main/clang -P files
 wget https://github.com/edisionnano/Freedreno_Turnip_Termux/raw/main/clang++ -P files
+chmod 777 files/clang
+chmod 777 files/clang++
 libdrm=$(curl -s https://archlinuxarm.org/packages/aarch64/libdrm|grep -oP '(?<=href=").*(?="\>Download\<)')
 wget -O libdrm.tar.xz $libdrm
 tar -C files -xvf libdrm.tar.xz usr
