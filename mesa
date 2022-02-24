@@ -1,8 +1,8 @@
 [binaries]
-ar = '/data/data/com.termux/files/home/mesa/files/llvm-ar'
+ar = 'llvm-ar'
 c = ['ccache', '/data/data/com.termux/files/home/mesa/files/clang','--target=aarch64-linux-android31']
 cpp = ['ccache', '/data/data/com.termux/files/home/mesa/files/clang++','--target=aarch64-linux-android31', '-fno-exceptions', '-fno-unwind-tables', '-fno-asynchronous-unwind-tables', '-static-libstdc++']
 c_ld = 'lld'
 cpp_ld =  'lld'
-strip = '/data/data/com.termux/files/home/mesa/files/llvm-objcopy'
+strip = 'llvm-objcopy'
 pkgconfig = ['env', 'PKG_CONFIG_LIBDIR=/data/data/com.termux/files/home/mesa/files/usr/lib/pkgconfig', 'pkg-config']
