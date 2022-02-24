@@ -9,9 +9,9 @@ yes|pkg update
 yes|pkg install binutils bison flex git ninja patchelf python wget zip
 yes|/data/data/com.termux/files/usr/bin/python3 -m pip install --upgrade pip
 yes|pip3 install mako meson
-wget https://github.com/edisionnano/Freedreno_Turnip_Termux/raw/main/mesa -P /data/data/com.termux/files/home/.local/share/meson/native
-wget https://github.com/edisionnano/Freedreno_Turnip_Termux/raw/main/clang -P files
-wget https://github.com/edisionnano/Freedreno_Turnip_Termux/raw/main/clang++ -P files
+wget https://raw.githubusercontent.com/edisionnano/Freedreno_Turnip_Termux/main/mesa -P /data/data/com.termux/files/home/.local/share/meson/native
+wget https://raw.githubusercontent.com/edisionnano/Freedreno_Turnip_Termux/main/clang -P files
+wget https://raw.githubusercontent.com/edisionnano/Freedreno_Turnip_Termux/main/clang++ -P files
 chmod 777 files/clang
 chmod 777 files/clang++
 libdrm=$(curl -s https://archlinuxarm.org/packages/aarch64/libdrm|grep -oP '(?<=href=").*(?="\>Download\<)')
