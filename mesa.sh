@@ -15,7 +15,7 @@ wget -O libdrm.tar.xz $libdrm
 tar -C files -xvf libdrm.tar.xz usr
 rm libdrm.tar.xz
 sed -i 's#prefix=#&/data/data/com.termux/files/home/mesa/files#g' files/usr/lib/pkgconfig/libdrm.pc
-git clone --depth 1 https://gitlab.freedesktop.org/mesa/mesa.git
+git clone --depth 1 --branch main https://gitlab.freedesktop.org/mesa/mesa.git
 cd mesa
 meson build-android-aarch64 --native-file mesa -Dbuildtype=release -Dplatforms=android -Dplatform-sdk-version=31 -Dandroid-stub=true -Dgallium-drivers= -Dvulkan-drivers=freedreno -Dfreedreno-kgsl=true -Dcpp_rtti=false -Db_lto=true
 ninja -C build-android-aarch64
