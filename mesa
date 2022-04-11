@@ -1,7 +1,7 @@
 [binaries]
 ar = 'llvm-ar'
 c = ['clang','--target=aarch64-linux-android31']
-cpp = ['clang++','--target=aarch64-linux-android31', '-fno-exceptions', '-fno-unwind-tables', '-fno-asynchronous-unwind-tables', '-static-libstdc++']
+cpp = ['clang++','--target=aarch64-linux-android32', '-fno-exceptions', '-fno-unwind-tables', '-fno-asynchronous-unwind-tables', '-static-libstdc++']
 c_ld = 'lld'
 cpp_ld =  'lld'
 strip = 'llvm-objcopy'
