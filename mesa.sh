@@ -22,7 +22,7 @@ sed -i 's#prefix=#&/data/data/com.termux/files/home/mesa/files#g' files/usr/lib/
 git clone --depth 1 --branch main https://gitlab.freedesktop.org/mesa/mesa.git
 cd mesa
 version=$(cat VERSION)
-echo "id=turnip\nname=Freedreno Turnip\nversion=$version\nversionCode=1\nauthor=Samantas5855\ndescription=Open Source Vulkan driver for Adreno GPUs, part of the MESA project" > ../magisk/module.prop
+echo -e "id=turnip\nname=Freedreno Turnip\nversion=$version\nversionCode=1\nauthor=Samantas5855\ndescription=Open Source Vulkan driver for Adreno GPUs, part of the MESA project" > ../magisk/module.prop
 wget https://raw.githubusercontent.com/edisionnano/Freedreno_Turnip_Termux/main/timespec_get.diff
 git apply timespec_get.diff
 meson build-android-aarch64 --native-file mesa -Dbuildtype=release -Dplatforms=android -Dplatform-sdk-version=32 -Dandroid-stub=true -Dgallium-drivers= -Dvulkan-drivers=freedreno -Dfreedreno-kgsl=true -Dcpp_rtti=false -Db_lto=true
