@@ -9,8 +9,8 @@ curl -s https://raw.githubusercontent.com/edisionnano/Freedreno_Turnip_Termux/ma
 echo "#MAGISK" > mesa/magisk/META-INF/com/google/android/updater-script
 cd mesa
 mkdir files
-yes|pkg update
-yes|pkg install binutils bison flex git ndk-multilib ninja patchelf python wget zip
+yes|pkg up
+yes|pkg i binutils bison flex git ndk-multilib ninja patchelf python wget zip
 yes|/data/data/com.termux/files/usr/bin/python3 -m pip install --upgrade pip
 yes|pip3 install mako meson
 wget https://raw.githubusercontent.com/edisionnano/Freedreno_Turnip_Termux/main/mesa -P /data/data/com.termux/files/home/.local/share/meson/native
